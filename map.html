@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="author" content="Nadja Krenzien">
+		 <link href="css/jquery.mobile.min.css" rel="stylesheet" media="screen">
+		 <link href="css/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+    <script> 
+    $(document).ready(function()
+    {
+               if (navigator.geolocation) 
+
+                {
+                navigator.geolocation.getCurrentPosition(function(position)
+                {
+                var map = L.map('map').setView([43.1991499,-79.2748045], 16);//18 = uoofaktor
+
+                // add an OpenStreetMap tile layer
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a class="map" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                // add a marker in the given location, attach some popup content to it and open the popup
+                L.marker([43.1991499,-79.2748045]).addTo(map)
+                    .bindPopup('Here we are!')
+                    .openPopup();
+
+	//crd.latitude >> Längengrad
+	//Breitengrad >> cdn.longitude
+
+                });
+
+}
+    });
+
+
+
+</script>
+<title>Where we are</title>
+	</head>
+	
+				
+
+  <div id="wrapper">
+
+ <!-- Header -->
+     <header id="top">
+            <img id="opener" src="img/frontdesk.jpg" alt="opener"/>
+        </header>
+    
+ <nav id="menu">
+		
+	<a class="navi" href="home.html">Home</a>
+	<a class="navi" href="team.html">Who we are</a>
+	<a class="navi" href="map.html">Where we are</a>
+	<a class="navi" href="contact.html">Contact</a>
+	
+	<a class="navi" href="sources.html">Sources</a>
+</nav>
+ <section class="content">  
+	<article class="article">
+
+	<header><h1>Where we are:</h1></header>	
+		   <div id='map'>
+
+
+                  </div>
+
+		</article>
+	</section>
+
+
+   
+  <!-- footer --> 
+ <footer id="bottom"> ON Medical Centre || 100 Main St. || Maintown || +1 289/3796258 || mail@medical.ca </footer>
+
+
+
+<!-- Nadja Krenzien (nk15qx), Student Number: 5938998, IASC2P02, Final Assignment-->
+</body>
+</html>
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<!-- Metainformation-->
+    <head>  
+
+    <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="author" content="Nadja Krenzien">
+        <meta name="publisher" content="Brock University">
+    <title>Medical centre xyz</title>
+    <link href="css/style.css" rel="stylesheet">
+       <script src="js/final.js" type="text/javascript" charset="utf-8"></script>
+
+    </head>
+<!-- Content -->
+<body>
+  <div id="wrapper">
+
+ <!-- Header -->
+     <header id="top">
+            <img id="opener" src="img/frontdesk.jpg" alt="opener"/>
+        </header>
+    
+ <nav id="menu">
+		
+	<a class="navi" href="home.html">Home</a>
+	<a class="navi" href="team.html">Who we are</a>
+	<a class="navi" href="map.html">Where we are</a>
+	<a class="navi" href="contact.html">Contact</a>
+	
+	<a class="navi" href="sources.html">Sources</a>
+	</nav>
+ <section class="content">  
+	<article class="article">
+
+	<header><h1>Contact</h1></header>	
+	
+
+		<p class="text"> 
+   ON Medical Centre<br/>
+<strong>   Opening Hours: </strong><br/>
+	Monday - Thursday: 8am - 1pm<br/>
+	Friday: closed<br/>
+	Tel: <strong>289 3796258</strong>
+                    </p>
+                 </p>
+
+<hr/>
+ 
+<h1>Please contact us:</h1>
+		
+<form
+	 action="nadja.php"
+	 method="post"
+	 accept-charset="UTF-8">
+	 	<label class="formular"  for="name" id="name"> Name: </label>
+	<input class="feld"
+    name="name" 
+    id="name" 
+    type="text" 
+    maxlength="50" 
+    placeholder="John Doe" 
+	required>
+
+	 
+	<label class="formular" for="e-mail"> Emailaddress: </label>
+	<input class="feld"
+     name="e-mail" 
+     id="e-mail" 
+     type="email" 
+     maxlength="50" 
+   	 required>
+    
+	 <label class="formular" for="telefonnummer"> Phonenumber: </label>
+	 <input class="feld"
+     name="telefonnummer" 
+     id="telefonnummer" 
+     	 value=""
+	 maxlength="50" 
+	 pattern="[0-9]*"
+     required>
+
+
+	<label class="formular" for="anliegen">What do you want?</label>
+	<select class="feld" id="anliegen" name="anliegen" onChange="displayAdditional();" required> 
+
+		<option value="">please choose</option>
+		<option value="appointment" id="appointment">Appointment</option> 
+		<option value="question" id="question">Question</option> 
+	</select > 
+<br/>  
+
+<div id="additionalArea">
+
+</div>
+
+<br/>  
+
+   <textarea class="feld"
+        name="nachricht"
+        id="nachricht"
+        rows="10"
+        cols="50"
+       	placeholder="..."
+		required></textarea>
+
+	<button type="submit" class="formular" id="absenden">Submit</button>
+	 
+ 
+</form>
+
+
+</section>
+	
+   
+  <!-- footer --> 
+ <footer id="bottom"> ON Medical Centre || 100 Main St. || Maintown || +1 289/3796258 || mail@medical.ca     </footer>
+<!-- Nadja Krenzien (nk15qx), Student Number: 5938998, IASC2P02, Final Assignment-->
+</body>
+</html>
+
